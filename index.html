@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="p-2" data-spy="scroll" data-target="#navbarNav" data-offset="56">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Mi Portafolio</a>
+            <a class="navbar-brand title" href="#">Mi Portafolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#proyecto1">Proyecto 1</a>
+                        <a class="nav-link text" href="#proyecto1">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#proyecto2">Proyecto 2</a>
+                        <a class="nav-link text" href="#proyecto2">contactos</a>
                     </li>
                 </ul>
             </div>
@@ -28,8 +28,17 @@
     </nav>
 
     <div class="section-1 p-5 parallax text-center">
-        <div class="container">
+        <div class="container title">
             <h2> MI PORTAFOLIO</h2>
+        </div>
+    </div>
+    <hr>
+    <div class="section-2 p-5 parallax text-center">
+        <div class="container">
+            <h2 class="title">Hey! My name is Grace.
+                I am a web & font
+                designer based in Utah</h2>
+                <p class="text">I have been working as a freelance designer and front-end developer since 2007. I’ve always been someone who has both a creative and a logical side. When I discovered web design in college, I realized it would be the perfect fit. I could use my creative side to design and my logical side to code. As a bonus, being both designer and developer allows me to make sure no detail is lost in translation.</p>
         </div>
     </div>
     <hr>
@@ -61,7 +70,7 @@
         <div class="row">
             <div class="col-md-6 p-2">
                 <div class="text-white card-modal p-3"  onclick="openModal()">
-                        <img class="img-1" src="img/Imagen2.png" alt="Botón de apertura del modal">
+                        <img class="img-1" src="img/Imagen3.png" alt="Botón de apertura del modal">
                     <div id="myModal" class="modal">
                         <div class="modal-content">
                             <span onclick="closeModal()" class="close">&times;</span>
@@ -72,7 +81,7 @@
             </div>            
             <div class="col-md-6 p-2">
                 <div class="text-white card-modal p-3"  onclick="openModal()">
-                        <img class="img-1" src="img/Imagen2.png" alt="Botón de apertura del modal">
+                        <img class="img-1" src="img/Imagen4.png" alt="Botón de apertura del modal">
                     <div id="myModal" class="modal">
                         <div class="modal-content">
                             <span onclick="closeModal()" class="close">&times;</span>
@@ -85,7 +94,7 @@
         <div class="row">
             <div class="col-md-6 p-2">
                 <div class="text-white card-modal p-3"  onclick="openModal()">
-                        <img class="img-1" src="img/Imagen2.png" alt="Botón de apertura del modal">
+                        <img class="img-1" src="img/Imagen5.png" alt="Botón de apertura del modal">
                     <div id="myModal" class="modal">
                         <div class="modal-content">
                             <span onclick="closeModal()" class="close">&times;</span>
@@ -96,6 +105,18 @@
             </div>            
         </div>
     </div>
+    <hr>
+    <footer id="proyecto2" class="footer">
+        <div class="footer-content">
+          <h2 class="title">Contacto</h2>
+          <p class="text text25">¡Estamos encantados de escucharte!</p>
+          <div class="contact-info text text25">
+            <p>Email: example@example.com</p>
+            <p>Teléfono: 123-456-7890</p>
+          </div>
+        </div>
+      </footer>
+      
     
 
     <!-- Agrega más secciones según tus proyectos -->
