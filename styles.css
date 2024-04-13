@@ -1,0 +1,103 @@
+.navbar {
+    transition: background-color 0.3s ease-in-out; /* Transición suave para el cambio de color del navbar */
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+}
+
+.img-1{
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para el efecto de parallax */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-1 {
+    margin-top: 80px;
+    background-color: rgba(255, 255, 255, 0.9); /* Color de fondo semi-transparente para el contenido */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del contenido */
+}
+
+.card-modal{
+    background: #e1bb8f;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos para cuando el modal está animado */
+  .modal.fade-in {
+    animation: fadeIn 0.3s ease-in-out forwards;
+  }
+  
+  .modal.fade-out {
+    animation: fadeOut 0.3s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  

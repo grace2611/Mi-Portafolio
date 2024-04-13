@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animación al hacer scroll vertical</title>
+<style>
+  /* Estilos para la animación */
+  .animacion {
+    opacity: 0; /* La animación comienza invisible */
+    transform: translateX(100px); /* Empieza desde la derecha */
+    transition: opacity 0.5s, transform 0.5s; /* Transiciones suaves */
+  }
+  /* Estilos adicionales */
+  .contenedor {
+    height: 2000px; /* Un contenedor alto para poder hacer scroll */
+  }
+</style>
+</head>
+<body>
+
+<div class="contenedor">
+  <!-- Elemento que se animará -->
+  <div class="animacion">
+    <h1>¡Animación activada por scroll vertical!</h1>
+    <p>Este contenido se animará cuando hagas scroll vertical hacia abajo.</p>
+  </div>
+</div>
+
+<script>
+  // Función para detectar cuando el scroll es vertical
+  function esScrollVertical() {
+    return window.innerHeight > window.innerWidth;
+  }
+
+  // Función para detectar cuando el elemento es visible en la ventana
+  function elementoVisible(elemento) {
+    var rect = elemento.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Función para activar la animación cuando el elemento es visible y el scroll es vertical
+  function activarAnimacion() {
+    var elementoAnimado = document.querySelector('.animacion');
+    if (esScrollVertical() && elementoVisible(elementoAnimado)) {
+      elementoAnimado.style.opacity = 1;
+      elementoAnimado.style.transform = 'translateX(0)';
+    }
+  }
+
+  // Escucha el evento scroll y activa la animación cuando el elemento es visible y el scroll es vertical
+  window.addEventListener('scroll', activarAnimacion);
+  // Activa la animación al cargar la página si el elemento ya está visible y el scroll es vertical
+  document.addEventListener('DOMContentLoaded', activarAnimacion);
+</script>
+
+</body>
+</html>
